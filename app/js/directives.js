@@ -5,7 +5,9 @@ app.directive('axHello', function () {
         link: function (scope, iElement, attrs) {
             iElement.bind("click", function (event) {
                 console.log("click", event);
-                scope.greeted = "";
+                scope.$apply(function () {
+                    scope.greeted = "World";
+                });
             });
         },
         restrict: 'A', // Default
