@@ -4,8 +4,9 @@ app.directive('axHello', function() {
     return {
         restrict: 'A', // Default
         scope: {
-            greeted: '@'
+            greeted: '=',
+            greeter: '@'
         },
-        template: '<p>Hello {{greeted}}!</p>'
+        template: '<p>Hello {{greeted}} from {{greeter}}!</p>'
     }
 });
