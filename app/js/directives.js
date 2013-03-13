@@ -3,7 +3,9 @@ var app = angular.module("directives", []);
 app.directive('axHello', function() {
     return {
         restrict: 'A', // Default
-        scope: {},
-        template: '<p>Hello {{username}}!</p>'
+        scope: {
+            greeted: '@'
+        },
+        template: '<p>Hello {{greeted}}!</p>'
     }
 });
