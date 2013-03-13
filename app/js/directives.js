@@ -1,12 +1,12 @@
 var app = angular.module("directives", []);
 
-app.directive('axHello', function() {
+app.directive('axHello', function () {
     return {
-        compile: function (tElement, attrs) {
-            console.log('compileFn: ', tElement, attrs, tElement.html());
-            return function (scope, iElement, attrs) {
-                console.log('linkFn: ', scope, iElement, attrs);
-            }
+        link: function (scope, iElement, attrs) {
+            iElement.bind("click", function (event) {
+                console.log("click", event);
+                scope.greeted = "";
+            });
         },
         restrict: 'A', // Default
         scope: {
