@@ -7,6 +7,7 @@ app.directive('axHello', function() {
             greeted: '=',
             greeter: '@'
         },
-        template: '<p>Hello {{greeted}} from {{greeter}}!</p>'
+        template: '<p><strong>Hello {{greeted}} from {{greeter}}!</strong></p><p data-ng-transclude></p>',
+        transclude: true
     }
 });
