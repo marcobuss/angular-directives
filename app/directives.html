@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html data-ng-app="directives">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Directives</title>
+    <script src="lib/angular.js"></script>
+    <script src="js/directives.js"></script>
+</head>
+<body data-ng-init="username = 'Stefan'">
+<h1>Angular Directives</h1>
+<div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" data-ng-model="username">
+</div>
+<hr>
+<pre>{{username}}</pre>
+</body>
+</html>
